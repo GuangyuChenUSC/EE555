@@ -4,15 +4,15 @@ Lu Xu lxu360@usc.edu
 part2_topo.py runs for the topology
 part2_router.py runs as the controller
 
-copy part_topo.py to ~/
+copy part2_topo.py to ~/
 copy part2_router.py to ~/pox/pox/misc/
-
 
 open two SSH terminal for Mininet, in the first terminal, run
 $sudo killall controller
 $sudo mn -c
 $ sudo mn --custom part2_topo.py --topo part2_topo --mac --controller=remote,ip=127.0.0.1,port=6633
 in the second terminal, run
+$cd pox
 $ sudo ./pox.py log.level --DEBUG misc.part2_router misc.full_payload
 
 in the first termianl, run
